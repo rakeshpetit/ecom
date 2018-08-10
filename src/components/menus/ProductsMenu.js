@@ -26,6 +26,7 @@ export class Home extends Component {
             <div>Products</div>
             <div style={menu}>
                 <div style={menuItems}>
+                {/* <ProductMenuItems /> */}
                     {this.state.isHovering &&
                         <ProductMenuItems />}
                 </div>
@@ -37,12 +38,15 @@ export class Home extends Component {
 
 const menu = {
   position: 'absolute',
-  zIndex: 1
+  zIndex: 1,
+  display: 'flex',
+  left: '1%'
   };
 
 const menuItems = {
   position: 'absolute',
-  zIndex: 2
+  zIndex: 2,
+  display: 'flex'
   };
 
 export default Home;

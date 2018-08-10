@@ -22,22 +22,31 @@ import MenuList from '@material-ui/core/MenuList';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-  root: {
-      width: '200px',
-      padding: '0px 2px 100px 2px',
-      margin: '2% -10%'
+  root: {      
+      margin: '2% 0%',
+      width: 'max-content'
   },
   paper: {
     display: 'flex',
     flexWrap: 'wrap',
     marginRight: theme.spacing.unit * 2,
     width: '100%',
+    padding: '20px 200px 0px 200px',
+    maxWidth: '96vw',
+    maxHeight: '200%',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    boxSizing: 'border-box',
+    boxShadow: 'none'
   },
   menuItem: {
     color: '#949090',
     fontSize: '12px',
     paddingTop: '0px',
     paddingBottom: '0px'
+  },
+  divPHeader: {
+    display: 'inline'
   },
   divHeader: {
     marginTop: '4%',
@@ -68,7 +77,7 @@ class ProductMenuItem extends React.Component {
   renderMenuItem = () =>  {
     const { classes } = this.props;
       return (
-          <div>
+          <div className={classes.divPHeader}>
               <div className={classes.divHeader}>HEADING</div>
               <MenuList>
                   <MenuItem className={classes.menuItem}>Profile</MenuItem>
@@ -85,6 +94,8 @@ class ProductMenuItem extends React.Component {
     return (
       <div className={classes.root}>
         <Paper className={classes.paper}>
+         {this.renderMenuItem()}
+         {this.renderMenuItem()}
          {this.renderMenuItem()}
          {this.renderMenuItem()}
          {this.renderMenuItem()}
