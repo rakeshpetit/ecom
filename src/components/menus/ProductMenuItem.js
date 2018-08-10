@@ -22,7 +22,7 @@ import MenuList from '@material-ui/core/MenuList';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-  root: {      
+  root: {            
       margin: '2% 0%',
       width: 'max-content'
   },
@@ -39,21 +39,31 @@ const styles = theme => ({
     boxSizing: 'border-box',
     boxShadow: 'none'
   },
-  menuItem: {
-    color: '#949090',
-    fontSize: '12px',
+  menuItem: {     
+    fontFamily: 'Source Sans Pro, sans-serif',   
+    fontSize: '14px',   
     paddingTop: '0px',
-    paddingBottom: '0px'
+    paddingBottom: '0px',    
+    textAlign: 'left',    
+    fontWeight: 400,
+    lineHeight: '10px',
+    color: '#505050',
+    textTransform: 'capitalize'
+    
   },
   divPHeader: {
     display: 'inline'
   },
   divHeader: {
+    fontFamily: 'Source Sans Pro, sans-serif',
     marginTop: '4%',
     marginLeft: '4%',
-    color: '#888484;',
-    fontSize: '12px',
-    fontWeight: 'bold'
+    fontSize: '14px',
+    textAlign: 'left',    
+    fontWeight: 600,
+    lineHeight: '20px',
+    color: '#111111',
+    textTransform: 'uppercase'
   }
 });
 
